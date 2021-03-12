@@ -1,0 +1,105 @@
+/* .photo{
+    flex: 1;
+}
+.border{
+    
+    width: 100%;
+    background: url('cupcakes.jpg');
+    background-size: contain;
+    padding-top: 75%;
+    position: relative;
+
+}
+.border::before{
+    position: absolute;
+    top: -7%;
+    left: -7%;
+    width: 100%;
+    height: 100%;
+    border: 6px solid #f5e23d;
+    content: '';
+    z-index: -1;
+}
+.lower_content .content h1{
+    font-weight: 400;
+    color: #000;
+}
+.lower_content .content h1 b{
+    font-size: 56px;
+    color: rgb(247, 119, 140);
+}
+
+.lower_content button {
+    margin: 0 auto;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px #000 solid;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    padding-top: 70px;
+    background-color: rgb(228, 207, 207);
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+
+}
+.store{
+    display: flex;
+    justify-content: center;
+}
+.footer .store h1{
+    font-weight: 400;
+    color: #000;
+}
+.footer .store h1 b{
+    font-size: 56px;
+    color: rgb(247, 119, 140);
+}
+.footer .btns button{
+    margin:0 35px 0 0;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px #000 solid;
+    
+}
+
+.inpt{
+
+display: flex;
+justify-content: center;
+padding-top: 20px;
+width: 100%;
+font-family: 'Kaushan Script', cursive;
+}
+.footer .inpt button{
+    
+    background-color:rgb(247, 119, 140);
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 2px rgb(247, 119, 140) solid;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.footer .inpt input{
+    font-family: 'Kaushan Script', cursive;
+    width:25%;
+    border: grey;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btns button {
+    font-family: 'Kaushan Script', cursive;
+} */
