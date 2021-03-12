@@ -1,0 +1,182 @@
+#include <iostream>
+#include <vector>
+#include <fstream>
+
+
+using namespace std;
+
+
+
+class klasa
+
+{
+
+public:
+
+
+    ifstream plik1;
+
+    klasa();
+
+
+};
+
+
+
+
+
+class jeden_z_obrazkow
+
+{
+public:
+
+
+
+vector <string> jeden_z_obrazkow;
+     int ktory_z_obrazkow = 0;
+
+void wziecie_obrazkow(string some_of_the_numbers);
+
+       void sprawdzenie_obrazkow_czy_dobre();
+
+    void czyszczenie_tablicy_vectorowej();
+
+
+
+};
+
+
+
+
+
+void jeden_z_obrazkow::czyszczenie_tablicy_vectorowej()
+
+
+
+{
+
+
+    jeden_z_obrazkow.clear();
+
+
+}
+
+klasa::klasa()
+{
+    plik1.open("plik1.txt");
+}
+void jeden_z_obrazkow::wziecie_obrazkow(string some_of_the_numbers)
+
+{
+    jeden_z_obrazkow.push_back(some_of_the_numbers);
+}
+void jeden_z_obrazkow::sprawdzenie_obrazkow_czy_dobre()
+
+{
+    int ile_wspolrzednych_x_znajduje_sie = 0, ile_wspolrzednych_y_znajduje_sie = 0, niepoprawny_x = 0, niepoprawny_y = 0, x, y ;
+
+
+
+ktory_z_obrazkow++;
+
+
+for (int i = 0; i < jeden_z_obrazkow.size() - 1; i++)
+
+    {
+
+
+    for (int j = 0; j < jeden_z_obrazkow.size() - 1; j++)
+{
+
+    if (jeden_z_obrazkow[i][j] == '1')
+        {
+                ile_wspolrzednych_x_znajduje_sie++;
+            }
+if (jeden_z_obrazkow[j][i] == '1')
+    {
+                ile_wspolrzednych_y_znajduje_sie++;
+            }
+
+        }if
+        ((ile_wspolrzednych_x_znajduje_sie % 2 == 0 && jeden_z_obrazkow[i][20] == '1') || (ile_wspolrzednych_x_znajduje_sie % 2 == 1 && jeden_z_obrazkow[i][20] == '0'))
+
+        {
+
+
+            niepoprawny_x++;
+            y = i;
+
+        }
+
+        if ((ile_wspolrzednych_y_znajduje_sie % 2 == 0 && jeden_z_obrazkow[20][i] == '1') || (ile_wspolrzednych_y_znajduje_sie % 2 == 1 && jeden_z_obrazkow[20][i] == '0'))
+
+
+        {
+            niepoprawny_y++;
+            x = i;
+        }
+
+        ile_wspolrzednych_x_znajduje_sie = 0;
+
+        ile_wspolrzednych_y_znajduje_sie = 0;
+
+    }
+
+if ((niepoprawny_x == 1 && niepoprawny_y == 1))
+
+    {
+        cout << "numer obrazka  " << ktory_z_obrazkow << endl;
+        cout << "jakie wspolrzedne on ma " << y + 1 << x + 1 << endl;
+    }
+
+else if ((niepoprawny_x == 0 && niepoprawny_y == 1))
+
+    {
+        cout << "numer obrazka  " << ktory_z_obrazkow << endl;
+
+        cout << "jakie wspolrzedne on ma" << "21" << x + 1 << endl;
+    }
+
+                     else if ((niepoprawny_x == 1 && niepoprawny_y == 0))
+
+
+
+    {
+        cout << "numer obrazka  " << ktory_z_obrazkow << endl;
+        cout << "jakie wspolrzedne on ma" << y+1 << "21" << endl;
+    }
+
+    niepoprawny_x = 0;
+
+
+    niepoprawny_y = 0;
+
+
+}
+
+int main()
+{
+    klasa t1;
+
+
+    jeden_z_obrazkow x1;
+    string tekst;
+
+
+    while (!t1.plik1.eof())
+
+    {
+             for (int i = 0; i < 21; i++)
+{
+                t1.plik1 >> tekst;
+
+                 x1.wziecie_obrazkow(tekst);
+
+        }
+        x1.sprawdzenie_obrazkow_czy_dobre();
+
+
+
+        x1.czyszczenie_tablicy_vectorowej();
+    }
+}
